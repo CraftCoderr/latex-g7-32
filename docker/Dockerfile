@@ -17,6 +17,9 @@ RUN apt-get update \
 
 VOLUME ["/doc/"]
 
+ADD fonts /usr/share/fonts/truetype/
+ADD make /template/build/
+ADD sty /template/style/
 ADD scripts /scripts/
 
 ENTRYPOINT ["/scripts/boot.sh"]

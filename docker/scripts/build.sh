@@ -17,7 +17,10 @@ build() {
 
     local tmpdir="/tmp/build"
 
-    cp -r "$PWD" "$tmpdir"
+    cp -r /doc /tmp
+    mv /tmp/doc "$tmpdir"
+    cp -r /template/build/* "$tmpdir"
+    cp -r /template/style/* "$tmpdir"/tex
     (
         cd "$tmpdir"
 
